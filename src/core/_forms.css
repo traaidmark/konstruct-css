@@ -1,0 +1,272 @@
+/* KONSTRUCT-CSS [ CORE > FORMS ] ########################################### */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+
+  --label-color: var(--color);
+  --field-color: var(--color-darker);
+  --field-color-focus: var(--color-darker);
+  --field-color-disabled: var(--color);
+  --field-color-placeholder: var(--color);
+  --field-border-width: 1px;
+  --field-border-color: var(--color);
+  --field-border-error-color: var(--color-red);
+  --field-border-focus-color: var(--color-dark);
+  --field-border-disabled-color: var(--color-light);
+  --field-disc-selected-color: var(--color-blue);
+
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. FORMS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2.1. LABEL ............................................................... */
+
+label {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--label-color);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-small);
+  line-height: var(--lineheight-small-lineHeight);
+  margin: 0;
+}
+
+label input {
+  flex: none;
+  width: fit-content;
+  margin-right: var(--gutter-small);
+}
+
+/* 2.1. END ................................................................. */
+
+/* 2.2. TEXT INPUT .......................................................... */
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+input[type=url],
+input[type=file],
+input[type=image],
+input[type=date],
+input[type=time],
+input[type=month],
+input[type=week],
+input[type=datetime-local],
+input[type=search],
+input[type=number] {
+  flex: 1;
+  display: block;
+  background: none;
+  width: 100%;
+  padding: var(--gutter-small);
+  outline: none;
+  border: solid var(--field-border-width) var(--field-border-color);
+  border-radius: var(--radius-small);
+  transition: var(--transition);
+  color: var(--field-color);
+  font-weight: var(--weight-bold);
+
+}
+
+input[type=color] {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: solid var(--field-border-width) var(--field-border-color);
+  border-radius: 100%;
+}
+
+input.hasError,
+select.hasError {
+  border-color: var(--field-border-error-color);
+  box-shadow: 0 0 10px rgba(var(--color-red-rgb), 0.4);
+}
+
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: var(--color-dark);
+}
+
+input::-moz-placeholder { /* Firefox 19+ */
+  color: var(--color-dark);
+}
+
+input:-ms-input-placeholder { /* IE 10+ */
+  color: var(--color-dark);
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+  color: var(--color-dark);
+}
+
+input:hover {
+  border-color: var(--field-border-color);
+}
+
+input:focus {
+  border-color: var(--color-border-focus-color);
+  color: var(--field-color-focus);
+  box-shadow: 0 0 10px rgba(var(--color-border-focus-color), 1);
+}
+
+input:disabled,
+select:disabled {
+  border-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+input:disabled:hover,
+select:disabled:hover {
+  border-color: var(--color-light);
+  color: var(--color);
+  cursor: not-allowed;
+}
+
+/* 2.2. END ................................................................. */
+
+/* 2.3. TEXTAREA ............................................................ */
+
+textarea {
+  flex: 1;
+  display: block;
+  background: none;
+  width: 100%;
+  min-height: 200px;
+  padding: var(--gutter-small);
+  outline: none;
+  border: solid var(--field-border-width) var(--field-border-color);
+  border-radius: var(--radius-small);
+  transition: var(--transition);
+  color: var(--field-color);
+  font-weight: var(--weight-regular);
+}
+
+/* 2.3. END ................................................................. */
+
+/* 2.4. RADIO ............................................................... */
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type='radio'],
+  input[type='checkbox'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: solid var(--field-border-width) var(--field-border-color);
+    background: var(--color-white);
+    transition: var(--transition-fast);
+  }
+
+  input[type='checkbox'] {
+    border-radius: var(--radius-small);
+  }
+
+  input[type='radio']::after,
+  input[type='checkbox']::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: var(--color-white);
+    border-radius: 100%;
+    transition: var(--transition-fast);
+  }
+
+  input[type='radio']:checked,
+  input[type='checkbox']:checked {
+    border-color: var(--field-disc-selected-color);
+  }
+
+  input[type='radio']:checked::after,
+  input[type='checkbox']:checked::after {
+    background: var(--field-disc-selected-color);
+  }
+
+  input[type='radio']:hover,
+  input[type='checkbox']:hover {
+    border-color: var(--field-border-focus-color);
+    cursor: pointer;
+  }
+
+  input[type='radio']:hover::after,
+  input[type='checkbox']:hover::after {
+    transform: translate3d(-50%, -50%, 0) scale(1.15);
+  }
+
+  input[type='radio']:disabled,
+  input[type='checkbox']:disabled {
+    border-color: var(--field-border-disabled-color);
+  }
+
+  input[type='radio']:disabled:hover,
+  input[type='checkbox']:disabled:hover {
+    cursor: not-allowed;
+    background: var(--color-white);
+  }
+
+  input[type='radio']:checked:disabled::after,
+  input[type='checkbox']:checked:disabled::after {
+    background: var(--field-border-disabled-color);
+  }
+
+  input[type='radio'].hasError,
+  input[type='checkbox'].hasError {
+    border-color: var(--field-border-error-color);
+  }
+
+  input[type='radio'].hasError:checked::after,
+  input[type='checkbox'].hasError:checked::after {
+    background: var(--field-border-error-color);
+  }
+}
+
+/* 2.4. END ................................................................. */
+
+/* 2.5. SELECT .............................................................. */
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    flex: 1;
+    display: block;
+    background: none;
+    width: 100%;
+    padding: var(--gutter-small);
+    outline: none;
+    border: solid var(--field-border-width) var(--field-border-color);
+    border-radius: var(--radius-small);
+    transition: var(--transition);
+    color: var(--field-color);
+    font-weight: var(--weight-bold);
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat, repeat;
+    /* arrow icon position (1em from the right, 50% vertical) , then gradient position */
+    background-position: right 0.7em top 50%, 0 0;
+    /* icon size, then gradient */
+    background-size: 0.65em auto, 100%;
+  }
+
+  select:hover {
+    cursor: pointer;
+    border-color: var(--field-border-focus-color);
+  }
+}
+
+/* 2.5. END ................................................................. */
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */

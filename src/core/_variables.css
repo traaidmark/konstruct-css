@@ -1,0 +1,117 @@
+/* KONSTRUCT-CSS [ CORE > VARIABLES ] ####################################### */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+
+  /* 1.1. COLOR VARIABLES ................................................... */
+
+  --color-white-rgb: 255, 255, 255;
+  --color-lighter-rgb: 245, 249, 250;
+  --color-light-rgb: 230, 231, 232;
+  --color-rgb: 133, 136, 143;
+  --color-dark-rgb: 71, 79, 95;
+  --color-darker-rgb: 10, 16, 30;
+  --color-black-rgb: 0, 0, 0;
+  --color-white: rgba(var(--color-white-rgb), 1);
+  --color-lighter: rgba(var(--color-lighter-rgb), 1);
+  --color-light: rgba(var(--color-light-rgb), 1);
+  --color: rgba(var(--color-rgb), 1);
+  --color-dark: rgba(var(--color-dark-rgb), 1);
+  --color-darker: rgba(var(--color-darker-rgb), 1);
+  --color-black: rgba(var(--color-black-rgb), 1);
+
+  --color-blue: rgba(var(--color-blue-rgb), 1);
+  --color-blue-rgb: 66, 175, 227;
+  --color-blue-light: 160, 215, 241;
+  --color-blue-dark: 20,53,69;
+
+  --color-orange: rgba(var(--color-orange-rgb), 1);
+  --color-orange-rgb: 246, 139, 57;
+  --color-orange-light: 250, 197, 156;
+  --color-orange-dark: 74, 42, 18;
+
+  --color-green: rgba(var(--color-green-rgb), 1);
+  --color-green-rgb: 93, 226, 165;
+  --color-green-light: 174, 240, 210 ;
+  --color-green-dark: 28, 68, 50;
+
+  --color-red: rgba(var(--color-red-rgb), 1);
+  --color-red-rgb: 237, 108, 99;
+  --color-red-light: 246, 181, 177;
+  --color-red-dark: 72, 33, 30;
+  
+  --color-primary-rgb: 61, 68, 136;
+  --color-secondary-rgb: 24, 34, 59;
+  --color-primary: rgba(var(--color-primary-rgb), 1);
+  --color-secondary: rgba(var(--color-secondary-rgb), 1);
+  --color-accent: var(--color-blue);
+  --color-facebook: #3b5998;
+  --color-linkedin: #0077b5;
+  --color-google: #dd4b39;
+
+  /* 1.1. END ............................................................... */
+
+  /* 1.2. LAYER VARIABLES ................................................... */
+
+  --layer-1: 10;
+  --layer-2: 20;
+  --layer-3: 30;
+  --layer-4: 40;
+  --layer-5: 50;
+  --layer-6: 60;
+  --layer-7: 70;
+  --layer-8: 80;
+  --layer-9: 90;
+  --layer-10: 100;
+
+  /* 1.2. END ............................................................... */
+
+  /* 1.3. GUTTER VARIABLES .................................................. */
+
+  --gutter: 20px;
+  --gutter-small: 10px;
+  --gutter-medium: 40px;
+  --gutter-large: 80px;
+  --gutter-jumbo: 120px;
+
+  /* 1.3. END ............................................................... */
+
+  /* 1.4. RADIUS VARIABLES .................................................. */
+
+  --radius-small: 5px;
+  --radius-medium: 10px;
+  --radius-large: 20px;
+
+  /* 1.4. END ............................................................... */
+
+  /* 1.5. TRANSITION VARIABLES .............................................. */
+
+  --transition: 0.5s;
+  --transition-slow: 1s;
+  --transition-fast: 0.3s;
+
+  /* 1.5. END ............................................................... */
+
+  /* 1.6. TRANSITION VARIABLES ............................................. */
+
+  --shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+  --shadow-text: 0 0 10px rgba(0, 0, 0, 0.85);
+  --shadow-text-light: 0 0 5px rgba(0, 0, 0, 0.25);
+
+  /* 1.6. END .............................................................. */
+
+  /* 1.7. MEDIA QUERY VARIABLES ............................................ */
+
+  --screen-small: '(max-width: 480px)';
+  --screen-medium: '(min-width: 481px) and (max-width: 1023px)';
+  --screen-large: '(min-width: 1024px) and (max-width: 1440px)';
+  --screen-xlarge: '(min-width: 1441px)';
+
+  /* 1.7. END .............................................................. */
+
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */

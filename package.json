@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "start-storybook -p 6006",
-    "build:css": "postcss src/**/*.css --base src --dir dist",
+    "build:css": "rm -rf dist && postcss src/**/*.css --base src --dir dist",
     "build-storybook": "build-storybook"
   }
 }
