@@ -1,5 +1,5 @@
 export default {
-  title: 'stuff/Headings'
+  title: 'stuff/2. Headings'
 };
 export const H1 = () => '<h1>Heading 1</h1>'
 export const H2 = () => '<h2>Heading 2</h2>'

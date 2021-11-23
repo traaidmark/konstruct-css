@@ -184,14 +184,6 @@ a:hover {
   color: var(--color-link-hover);
 }
 
-code {
-  display: inline-block;
-  background: var(--color-light);
-  color: var(--color-dark);
-  padding: 2px var(--gutter-small);
-  border-radius: var(--radius-small);
-}
-
 /* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* END OF FILE ############################################################## */

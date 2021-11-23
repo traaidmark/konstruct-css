@@ -1,0 +1,167 @@
+/* KONSTRUCT-CSS [ FEATURE > SECTION ] ###################################### */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+  --section-horizontal-xl: 15%;
+  --section-horizontal-l: 10%;
+  --section-horizontal-m: var(--gutter);
+  --section-horizontal-s: var(--gutter-small);
+  --section-vertical-xl: var(--gutter-medium);
+  --section-vertical-l: var(--gutter-medium);
+  --section-vertical-m: var(--gutter);
+  --section-vertical-s: var(--gutter-small);
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. SECTION CONTAINER +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.f-section {
+  padding: var(--section-vertical-s) var(--section-horizontal-s);
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .f-section {
+    padding: var(--section-vertical-m) var(--section-horizontal-m);
+  }
+
+  .f-section--wide {
+    --section-horizontal-m: var(--gutter-small);
+  }
+
+  .f-section--narrow {
+    --section-horizontal-m: 15%;
+  }
+
+  .f-section--deep {
+    --section-vertical-m: var(--gutter-medium);
+  }
+
+  .f-section--shallow {
+    --section-vertical-m: var(--gutter-small);
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .f-section {
+    padding: var(--section-vertical-l) var(--section-horizontal-l);
+  }
+
+  .f-section--wide {
+    --section-horizontal-l: var(--gutter-medium);
+  }
+
+  .f-section--narrow {
+    --section-horizontal-l: 20%;
+  }
+
+  .f-section--deep {
+    --section-vertical-l: var(--gutter-large);
+  }
+
+  .f-section--shallow {
+    --section-vertical-l: var(--gutter);
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .f-section {
+    padding: var(--section-vertical-xl) var(--section-horizontal-xl);
+  }
+
+  .f-section--wide {
+    --section-horizontal-xl: var(--gutter-large);
+  }
+
+  .f-section--narrow {
+    --section-horizontal-xl: 30%;
+  }
+
+  .f-section--deep {
+    --section-vertical-xl: var(--gutter-large);
+  }
+
+  .f-section--shallow {
+    --section-vertical-xl: var(--gutter);
+  }
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. SECTION VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.f-section--noTop {
+  padding-top: 0;
+}
+
+.f-section--noRight {
+  padding-right: 0;
+}
+
+.f-section--noBottom {
+  padding-bottom: 0;
+}
+
+.f-section--noLeft {
+  padding-left: 0;
+}
+
+/* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. SECTION HEADER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.f-section__header {
+  margin-bottom: var(--gutter-medium);
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+  text-align: center;
+
+}
+
+.f-section__header > h2 {
+  margin: 0 0 var(--gutter-small) 0;
+}
+
+.f-section__header > p {
+  font-size: var(--size-medium);
+  line-height: var(--lineheight-medium);
+}
+
+@media screen and (max-width: 480px) {
+  .f-section__header {
+    margin-bottom: var(--gutter);
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .f-section__header {
+    margin-bottom: var(--gutter);
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .f-section__header {
+    margin-bottom: var(--gutter-medium);
+    width: 60%;
+  }
+}
+
+/* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 4. SECTION FOOTER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.f-section__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--gutter-medium);
+
+}
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */

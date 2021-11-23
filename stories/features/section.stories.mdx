@@ -1,0 +1,14 @@
+import {Meta, Story, Preview} from '@storybook/addon-docs'
+
+<Meta title="Features/Section"/>
+
+### Default Section
+
+import sectionDefault from '../../html/features/section.html';
+export const Section = (args) => sectionDefault
+
+<Preview mdxSource={sectionDefault}>
+	<Story name="Default Section">
+    { Section.bind(({})) }
+	</Story>
+</Preview>
